@@ -1,12 +1,16 @@
 /*
- * sd_hal_mpu6050.h
+ * mpu6050.h
  *
  *  Created on: Feb 19, 2016
  *      Author: Sina Darvishi
+ *
+ *  Modified on: Feb 27, 2020
+ *           By: Filipe Chagas
+ *       Source: https://github.com/FilipeChagasDev/stm32-mpu6050
  */
 
-#ifndef DRIVERS_MYLIB_SD_HAL_MPU6050_H_
-#define DRIVERS_MYLIB_SD_HAL_MPU6050_H_
+#ifndef SD_HAL_MPU6050_H
+#define SD_HAL_MPU6050_H
 
 /*
  C++ detection
@@ -15,8 +19,37 @@ extern "C" {
 #endif
 */
 
-#include "stm32f0xx_hal.h"
-#include "stm32f0xx_hal_i2c.h"
+/* --------------------------------------------------------------- */
+/* IMPORTANT: Paste these includes into your project's main.h file */
+#if 0
+    /* For stm32f0xx */
+    #include <stm32f0xx_hal.h>
+    #include <stm32f0xx_hal_i2c.h>
+
+   
+    /* For stm32f1xx */
+    #include <stm32f1xx_hal.h>
+    #include <stm32f1xx_hal_i2c.h>
+
+    
+    /* For stm32f2xx */
+    #include <stm32f2xx_hal.h>
+    #include <stm32f2xx_hal_i2c.h>
+
+    
+    /* For stm32f3xx */
+    #include <stm32f3xx_hal.h>
+    #include <stm32f3xx_hal_i2c.h>
+
+    
+    /* For stm32f4xx */
+    #include <stm32f4xx_hal.h>
+    #include <stm32f4xx_hal_i2c.h>
+
+/* --------------------------------------------------------------- */
+#else
+    #include <main.h>
+#endif
 
 /**
  * @defgroup SD_MPU6050_Macros

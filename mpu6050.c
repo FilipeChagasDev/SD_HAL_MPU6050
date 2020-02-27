@@ -24,7 +24,7 @@
  * |----------------------------------------------------------------------
  */
 
-#include "sd_hal_mpu6050.h"
+#include "mpu6050.h"
 
 /* Default I2C address */
 #define MPU6050_I2C_ADDR			0xD0
